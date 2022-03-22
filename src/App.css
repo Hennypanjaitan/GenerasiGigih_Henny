@@ -6,6 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+.App button{
+  background-color: green; 
+}
+a{
+  color: white;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
