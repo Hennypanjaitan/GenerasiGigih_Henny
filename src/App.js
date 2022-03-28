@@ -1,20 +1,28 @@
-import './App.css';
-import dataJson from './components/home/data';
-import Playlist from './components/home/playlist';
+import logo from "./logo.svg";
+import "./App.css";
 
+import { Artists } from "./components/AlbumDetails/artist";
+import { AllAlbum } from "./components/AllAlbum";
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <h2>Track Info</h2>
-        <Playlist url={dataJson.album.images[0].url}/>
-      </div>
-      <div>
-        <Playlist name={dataJson.name}/>
-        <Playlist albumName={dataJson.album.name}/>
-        <Playlist artist={dataJson.artists[0].name}/>
-        <button><a href={dataJson.album.artists[0].external_urls.spotify}>SELECT</a></button>
+    <div className="mainPage">
+      <center>
+        <h1 className="judul">Playlist MUsic </h1>
+      </center>
+      <div
+        className="group"
+        style={{
+          border: "green",
+          padding: "10px",
+          margin: "auto",
+          width: "50%",
+          border: "3px solid green",
+          display: "block",
+          textAlign: "center",
+        }}
+      >
+        <AllAlbum />
       </div>
     </div>
   );
