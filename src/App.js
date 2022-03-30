@@ -1,29 +1,23 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-import { Artists } from "./components/AlbumDetails/artist";
-import { AllAlbum } from "./components/AllAlbum";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <div className="mainPage">
-      <center>
-        <h1 className="judul">Playlist MUsic </h1>
-      </center>
-      <div
-        className="group"
-        style={{
-          border: "green",
-          padding: "10px",
-          margin: "auto",
-          width: "50%",
-          border: "3px solid green",
-          display: "block",
-          textAlign: "center",
-        }}
-      >
-        <AllAlbum />
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
