@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 import React from 'react';
 
-
 const ButtonAuth = () => {
   function randomString(length) {
     var result = '';

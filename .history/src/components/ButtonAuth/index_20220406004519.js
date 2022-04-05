@@ -1,6 +1,15 @@
 /* eslint-disable no-undef */
 import React from 'react';
 
+// Environment variables from `.env` file.
+const {
+  REACT_APP_SPOTIFY_CLIENT_ID,
+  REACT_APP_SPOTIFY_REDIRECT_URI,
+  REACT_APP_SPOTIFY_SCOPES,
+} = process.env;
+
+const BASE_API_URL = "https://api.spotify.com/v1";
+
 
 const ButtonAuth = () => {
   function randomString(length) {
