@@ -1,34 +1,30 @@
 import React from 'react';
 import Search from '../Search';
+import './style.css';
 
-const ViewAuth = ({ handleChange, handleSubmit, handleLogout, user }) => {
+const ViewAuth = ({
+  handleChange,
+  handleSubmit,
+  handleLogout,
+  user,
+  searchInput,
+}) => {
   return (
     <div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+      <div className="search-container">
         <h1 style={{ textAlign: 'center', flex: '1' }}>
           Hello {user}, temukan lagu kesukaanmu disini!
         </h1>
-        <button
-          style={{
-            padding: '0.5rem 2rem',
-            fontSize: '1rem',
-            backgroundColor: '#F0A500',
-            outline: 'none',
-            cursor: 'pointer',
-            fontWeight: 'bold',
-          }}
-          onClick={handleLogout}
-        >
+        <button className="btn-logout" onClick={handleLogout}>
           Logout
         </button>
       </div>
 
-      <Search handleChange={handleChange} handleSubmit={handleSubmit} />
+      <Search
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        searchInput={searchInput}
+      />
     </div>
   );
 };

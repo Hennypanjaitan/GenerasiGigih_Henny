@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { setToken } from '../../store/authSlice';
 
-export const Playlist = () => {
+export const Homepage = () => {
   const token = useSelector((state) => state.token?.value);
   const dispatch = useDispatch();
 
@@ -27,6 +27,24 @@ export const Playlist = () => {
   }, [dispatch]);
 
   return (
-    <div>{token ? <Redirect to="create-playlist" /> : <NoAuthView />}</div>
+    <div
+      style={{
+        backgroundColor: '#060606',
+        position: 'relative',
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: '#060606',
+          color: 'black',
+          opacity: '35%',
+          width: '100%',
+          zIndex: '50',
+          minHeight: '100vh',
+          position: 'absolute',
+        }}
+      />
+      {token ? <Redirect to="create-playlist" /> : <NoAuthView />}
+    </div>
   );
 };

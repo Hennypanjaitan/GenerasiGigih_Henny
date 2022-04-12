@@ -1,6 +1,6 @@
 import './App.css';
 import { CreatePlaylist } from './pages/create-playlist';
-import { Playlist } from './pages/homework';
+import { Homepage } from './pages/homework';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,7 +13,7 @@ function App() {
             <CreatePlaylist />
           </Route>
           <Route path="/">
-            <Playlist />
+            <Homepage />
           </Route>
         </Switch>
       </Router>

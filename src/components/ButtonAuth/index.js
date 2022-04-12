@@ -1,6 +1,7 @@
 import React from 'react';
+import './style.css';
 
-const ButtonAuth = () => {
+const AuthButton = () => {
   function randomString(length) {
     var result = '';
     var characters =
@@ -26,20 +27,15 @@ const ButtonAuth = () => {
         href={SPOTIFY_AUTH_URL}
         style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }}
       >
-        <button
-          style={{
-            padding: '1rem 4rem',
-            fontSize: '1.5rem',
-            backgroundColor: '#F0A500',
-            outline: 'none',
-            cursor: 'pointer',
-          }}
-        >
-          Get my access token
+        <button className="btn">
+          <span className="ic-spotify">
+            <img src="/images/ic-spotify.png" />
+          </span>
+          Create your playlist !
         </button>
       </a>
     </div>
   );
 };
 
-export default ButtonAuth;
+export default AuthButton;
