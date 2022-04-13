@@ -1,8 +1,9 @@
 import React from 'react';
 import Search from '../Search';
+import { Text, Button } from '@chakra-ui/react';
 import './style.css';
 
-const ViewAuth = ({
+const AuthView = ({
   handleChange,
   handleSubmit,
   handleLogout,
@@ -12,12 +13,18 @@ const ViewAuth = ({
   return (
     <div>
       <div className="search-container">
-        <h1 style={{ textAlign: 'center', flex: '1' }}>
+        <Text fontSize="4xl" fontWeight="bold" textAlign="center" flex="1">
           Hello {user}, temukan lagu kesukaanmu disini!
-        </h1>
-        <button className="btn-logout" onClick={handleLogout}>
+        </Text>
+        <Button
+          colorScheme="purple"
+          size="lg"
+          height="50px"
+          width="120px"
+          onClick={handleLogout}
+        >
           Logout
-        </button>
+        </Button>
       </div>
 
       <Search
@@ -29,4 +36,4 @@ const ViewAuth = ({
   );
 };
 
-export default ViewAuth;
+export default AuthView;
