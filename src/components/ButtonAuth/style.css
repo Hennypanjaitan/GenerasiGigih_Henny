@@ -1,0 +1,26 @@
+.btn {
+	display: grid;
+	align-items: center;
+	padding: 0.5rem 1.5rem;
+	font-size: 1.25rem;
+	background-color: #02351d;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	font-weight: 300;
+	color: white;
+
+}
+
+.btn:hover {
+	color: #0c472a;
+	background-color: rgb(165, 211, 178);
+	
+}
+
+@media only screen and (max-width: 300px) {
+	.btn {
+		
+		font-size: 1rem;
+	}
+}
